@@ -1,7 +1,6 @@
 import '@/styles/globals.css';
 import type { AppProps } from 'next/app';
 import Head from 'next/head';
-import Navbar from '@/resources/Navbar';
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
@@ -39,7 +38,6 @@ export default function App({ Component, pageProps }: AppProps) {
         <meta data-react-helmet="true" name="twitter:title" content="Home"></meta>
       </Head>
       <main>
-        <Navbar />
         <Component {...pageProps} />
       </main>
     </>
