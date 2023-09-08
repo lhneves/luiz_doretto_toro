@@ -22,7 +22,7 @@ export default function Navigation({ navbarLinks }: NavigationProps) {
   return (
     <div className="flex flex-col gap-10">
       {Object.keys(navbarLinks).map((key) => (
-        <div key={key}>
+        <div key={key} className="flex flex-col gap-3">
           <h2 className="font-hairline">{key.toLocaleUpperCase()}</h2>
           <motion.ul
             className="flex flex-col content-center text-gray-300 pl-8 gap-2"

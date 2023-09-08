@@ -3,6 +3,7 @@ import { AnimatePresence, motion } from 'framer-motion';
 
 import Menu from '@/assets/icons/icn_menu.svg';
 import Close from '@/assets/icons/icn_close.svg';
+import Image from 'next/image';
 
 type MenuToggleProps = {
   isOpen: boolean;
@@ -21,9 +22,23 @@ export default function MenuToggle({ isOpen, toggle }: MenuToggleProps) {
         transition={{ duration: 0.2 }}
       >
         {isOpen ? (
-          <Close cursor="pointer" onClick={toggle} />
+          <Image
+            src={Close}
+            width={0}
+            height={0}
+            alt="Logo"
+            className="h-full cursor-pointer"
+            onClick={toggle}
+          />
         ) : (
-          <Menu cursor="pointer" onClick={toggle} />
+          <Image
+            src={Menu}
+            width={0}
+            height={0}
+            alt="Logo"
+            className="h-full cursor-pointer"
+            onClick={toggle}
+          />
         )}
       </motion.button>
     </AnimatePresence>
