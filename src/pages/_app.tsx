@@ -2,13 +2,15 @@ import '@/styles/globals.css';
 import type { AppProps } from 'next/app';
 import Head from 'next/head';
 
+import Navbar from '@/resources/Navbar';
+
 export default function App({ Component, pageProps }: AppProps) {
   return (
     <>
       <Head>
         <title>Melhores ações para investir na Bolsa | Toro Investimentos</title>
         <meta charSet="utf-8" />
-        <meta name="viewport" content="width=device-width" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta property="og:url" content="https://www.toroinvestimentos.com.br/bolsa" />
         <meta
           property="og:title"
@@ -38,6 +40,7 @@ export default function App({ Component, pageProps }: AppProps) {
         <meta data-react-helmet="true" name="twitter:title" content="Home"></meta>
       </Head>
       <main>
+        <Navbar />
         <Component {...pageProps} />
       </main>
     </>
