@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
+
 import Link from 'next/link';
+import Image from 'next/image';
 
 import Button from '../Button';
 import Overlay from './Overlay';
@@ -65,25 +67,32 @@ export default function Navbar() {
   };
 
   return (
-    <section className="flex justify-between items-center px-6 py-3 lg:shadow-navbar">
-      <Link href="/">
-        <LogoName />
-      </Link>
+    <section className="px-6 py-3 lg:shadow-navbar">
+      <div className="flex justify-between items-center max-w-7xl mx-auto">
+        <Link href="/">
+          <Image src={LogoName} width={0} height={0} alt="Logo" className="h-full" />
+        </Link>
 
-      <nav>
-        <ul className="hidden lg:flex flex-wrap content-center text-gray-300 lg:gap-7 xl:gap-10">
-          {navbarDesktopLinks.map(([label, link]) => (
-            <li key={link} className="hover:text-gray-800 transition duration-300 ease-in-out">
-              <Link href={link}>{label}</Link>
-            </li>
-          ))}
-        </ul>
-      </nav>
+        <nav>
+          <ul className="hidden lg:flex flex-wrap content-center text-gray-300 lg:gap-7 xl:gap-10">
+            {navbarDesktopLinks.map(([label, link]) => (
+              <li key={link} className="hover:text-gray-800 transition duration-300 ease-in-out">
+                <Link href={link}>{label}</Link>
+              </li>
+            ))}
+          </ul>
+        </nav>
 
-      <div className="flex gap-4">
-        <Button label="Fazer login" variant="ghost" className="hidden sm:flex" icon={<User />} />
-        <Button label="Abra sua conta" variant="outlined" />
-        <MenuToggle isOpen={isOpen} toggle={() => setIsOpen((prev) => !prev)} />
+        <div className="flex gap-4">
+          <Button
+            label="Fazer login"
+            variant="ghost"
+            className="hidden sm:flex"
+            icon={<Image src={User} width={0} height={0} alt="Logo" className="h-full" />}
+          />
+          <Button label="Abra sua conta" variant="outlined" />
+          <MenuToggle isOpen={isOpen} toggle={() => setIsOpen((prev) => !prev)} />
+        </div>
       </div>
 
       {/* Mobile Navbar */}
