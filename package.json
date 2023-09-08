@@ -8,7 +8,8 @@
     "start": "next start",
     "lint": "next lint",
     "prepare": "npx husky install",
-    "test": "jest --watch"
+    "test": "jest --watch",
+    "test:dev": "jest"
   },
   "dependencies": {
     "@testing-library/user-event": "^14.4.3",
