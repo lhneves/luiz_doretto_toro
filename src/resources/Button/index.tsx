@@ -2,12 +2,12 @@ import React, { ComponentProps } from 'react';
 import { VariantProps, tv } from 'tailwind-variants';
 
 const button = tv({
-  base: 'text-xs sm:text-sm border-0 rounded items-center transition duration-300 ease-in-out gap-3',
+  base: 'text-sm sm:text-base border-0 rounded items-center transition duration-300 ease-in-out gap-3',
   variants: {
     variant: {
       outlined:
         'text-primary-100 border border-primary-100 px-4 py-3 hover:text-white hover:bg-primary-100',
-      contained: 'text-white bg-primary-100 px-2 py-4 hover:bg-primary-200',
+      contained: 'text-white bg-primary-100 px-2 py-3 hover:bg-primary-200',
       ghost: 'text-gray-400 bg-transparent hover:text-primary-100',
     },
   },
