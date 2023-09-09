@@ -2,7 +2,7 @@ import React, { ComponentProps } from 'react';
 import { VariantProps, tv } from 'tailwind-variants';
 
 const button = tv({
-  base: 'text-sm sm:text-base border-0 rounded items-center transition duration-300 ease-in-out gap-3',
+  base: 'text-base border-0 rounded items-center transition duration-300 ease-in-out gap-3',
   variants: {
     variant: {
       outlined:
