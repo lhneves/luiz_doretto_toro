@@ -5,8 +5,8 @@ import Image from 'next/image';
 import Button from '@/resources/Button';
 
 import SantanderLogo from '@/assets/images/santander_logo.svg';
-import ToroVsIbovMobile from '@/assets/images/toro_vs_ibov_mobile.svg';
-import ToroVsIbovDesktop from '@/assets/images/toro_vs_ibov_desktop.svg';
+import ToroVsIbovMobile from '@/assets/images/toro_vs_ibov_mobile.webp';
+import ToroVsIbovDesktop from '@/assets/images/toro_vs_ibov_desktop.webp';
 
 export default function HeroSection() {
   return (
@@ -30,10 +30,9 @@ export default function HeroSection() {
       <div>
         <Image
           src={ToroVsIbovMobile}
-          width={0}
-          height={0}
           alt="Toro One vs Ibov"
           className="w-full sm:hidden"
+          placeholder="blur"
         />
         <Image
           src={ToroVsIbovDesktop}
@@ -41,6 +40,7 @@ export default function HeroSection() {
           height={344}
           alt="Toro One vs Ibov"
           className="hidden sm:block"
+          placeholder="blur"
         />
       </div>
     </section>
