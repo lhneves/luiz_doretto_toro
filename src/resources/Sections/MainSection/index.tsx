@@ -18,7 +18,7 @@ const mainSection = tv({
     cardsContainer:
       'flex flex-col justify-center items-start gap-6 md:flex-row md:flex-wrap lg:absolute lg:top-20 lg:grid lg:grid-rows-2 lg:grid-flow-col lg:w-full lg:justify-between lg:px-4 lg:max-w-6xl',
     evaristoMobile: 'w-full max-w-sm lg:hidden',
-    evaristoDesktop: 'hidden w-auto lg:block',
+    evaristoDesktop: 'hidden lg:block',
   },
 });
 
