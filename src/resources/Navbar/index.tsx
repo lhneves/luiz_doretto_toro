@@ -70,7 +70,7 @@ export default function Navbar() {
     <section className="px-6 py-3 lg:shadow-navbar">
       <div className="flex justify-between items-center max-w-7xl mx-auto">
         <Link href="/">
-          <Image src={LogoName} width={0} height={0} alt="Logo" className="h-full" />
+          <Image src={LogoName} alt="Logo" className="h-full" />
         </Link>
 
         <nav>

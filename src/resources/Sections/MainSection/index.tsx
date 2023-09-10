@@ -2,8 +2,8 @@ import React from 'react';
 
 import Image from 'next/image';
 
-import EvaristoMobile from '@/assets/images/evaristo.svg';
-import EvaristoDesktop from '@/assets/images/evaristo_desktop.svg';
+import EvaristoMobile from '@/assets/images/evaristo_mobile.webp';
+import EvaristoDesktop from '@/assets/images/evaristo_desktop.webp';
 
 import Button from '@/resources/Button';
 import CardBenefits from '@/resources/CardBenefits';
@@ -42,16 +42,14 @@ export default function MainSection() {
         </div>
         <Image
           src={EvaristoMobile}
-          width={0}
-          height={0}
           className={evaristoMobile()}
+          placeholder="blur"
           alt="Evaristo"
         />
         <Image
           src={EvaristoDesktop}
-          width={0}
-          height={0}
           className={evaristoDesktop()}
+          placeholder="blur"
           alt="Evaristo"
         />
         <Button label="Abra sua conta grátis" className="w-full max-w-sm" />
