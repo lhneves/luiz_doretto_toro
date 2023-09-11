@@ -46,6 +46,6 @@ One of the main focus of the project was the performance, with that in mind one 
 
 ## Deploy and Actions
 
-You can visit the deploy on [this link](luiz-doretto-toro.vercel.app), also included in the project about section.
+You can visit the deploy on [this link](https://luiz-doretto-toro.vercel.app), also included in the project about section.
 
 You can also check the actions on the Action tab, this action was just to ensure that any test will not fail while creating a new PR.
