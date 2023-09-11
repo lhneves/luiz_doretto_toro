@@ -7,7 +7,7 @@ module.exports = {
         sans: ['Open Sans, sans-serif'],
       },
       fontSize: {
-        '3xl': ['1.75rem', '1.925rem'],
+        '3xl': ['1.75rem', '2rem'],
         '4xl': ['2rem', '2.7rem'],
       },
       maxWidth: {
