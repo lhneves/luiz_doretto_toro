@@ -13,7 +13,7 @@ type OverlayProps = HTMLMotionProps<'div'> & {
 export default function Overlay({ isOpen, ...props }: OverlayProps) {
   return (
     <motion.div
-      className="absolute top-0 left-0 h-full w-full bottom-0 bg-black"
+      className="fixed top-0 left-0 h-full w-full bottom-0 bg-black"
       animate={isOpen ? 'open' : 'closed'}
       variants={variants}
       initial={false}

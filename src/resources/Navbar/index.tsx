@@ -39,6 +39,14 @@ const variants = {
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
+  const handleNavbarToggle = () => {
+    setIsOpen((prev) => !prev);
+
+    if (typeof window != 'undefined' && window.document) {
+      document.body.style.overflow = isOpen ? 'unset' : 'hidden';
+    }
+  };
+
   const navbarDesktopLinks = [
     ['Bolsa', '/bolsa'],
     ['Renda Fixa', '/renda-fixa'],
@@ -67,7 +75,7 @@ export default function Navbar() {
   };
 
   return (
-    <section className="px-6 py-3 lg:shadow-navbar">
+    <section className="sticky -top-1 z-50 px-6 py-3 bg-white lg:shadow-navbar">
       <div className="flex justify-between items-center max-w-7xl mx-auto">
         <Link href="/">
           <Image src={LogoName} alt="Logo" className="h-full" />
@@ -91,15 +99,15 @@ export default function Navbar() {
             icon={<Image src={User} width={0} height={0} alt="Logo" className="h-full" />}
           />
           <Button label="Abra sua conta" variant="outlined" />
-          <MenuToggle isOpen={isOpen} toggle={() => setIsOpen((prev) => !prev)} />
+          <MenuToggle isOpen={isOpen} toggle={handleNavbarToggle} />
         </div>
       </div>
 
       {/* Mobile Navbar */}
-      <Overlay isOpen={isOpen} onClick={() => setIsOpen((prev) => !prev)} />
+      <Overlay isOpen={isOpen} onClick={handleNavbarToggle} />
 
       <motion.aside
-        className="absolute top-0 -right-64 bottom-0 bg-white px-8 sm:px-16 py-16 overflow-y-scroll"
+        className="fixed top-0 -right-64 bottom-0 bg-white px-8 overflow-y-scroll sm:px-16 py-16 "
         animate={isOpen ? 'open' : 'closed'}
         variants={variants}
         initial={false}
