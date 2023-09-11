@@ -1,38 +1,51 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
-
 ## Getting Started
 
-First, run the development server:
+First, install all dependencies:
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
+npm install
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+After, install husky dependencies:
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+```bash
+num run prepare
+```
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+Finaly, run the development server:
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+```bash
+num run dev
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## Project Structure
 
-## Learn More
+### ESLint and Prettier
 
-To learn more about Next.js, take a look at the following resources:
+Used to check sintax, find problems and enforce code style.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Husky, commitlint and commitzen
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+Used to follow convencional commits, a commit pattern.
 
-## Deploy on Vercel
+### Tailwind, tailwind-variants and framer-motion
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Used to make some animations in a easy way (framer-motion), to use css directly on markup (tailwind) and to organize it better (tv).
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+### Jest and React Testing Library
+
+Used to create tests.
+
+## Performance and Responsiveness
+
+One of the main focus of the project was the performance, with that in mind one important step was to import bigger images as webp. Another great step was to use `Image` component from `next/image`, that component allow us to use a blur placeholder while the image is being loaded and also load the image using the lazy loading, by default. This combination results in a performance like the images below, from the PageSpeed Insights website:
+
+![Desktop Performance](./.github/desktop-performance.png)
+
+![Mobile Performance](./.github/mobile-performance.png)
+
+## Deploy and Actions
+
+You can visit the deploy on [this link](luiz-doretto-toro.vercel.app), also included in the project about section.
+
+You can also check the actions on the Action tab, this action was just to ensure that any test will not fail while creating a new PR.
